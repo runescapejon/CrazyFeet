@@ -68,8 +68,8 @@ public class CrazyFeetListener implements Listener {
 			Location loc = player.getLocation();
 			
 			if(to.getX() != from.getBlockX() || to.getY() != from.getY() || to.getZ() != from.getZ()) {
-				loc.setY(loc.getY()-1);
-				player.getWorld().playEffect(loc, Effect.POTION_BREAK, 1, 100);
+				loc.setY(loc.getY());
+				player.getWorld().playEffect(loc, Effect.POTION_SWIRL, 1, 100);
 			} else {
 				pME.setCancelled(false);
 			}
