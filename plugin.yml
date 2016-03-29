@@ -79,7 +79,6 @@ commands:
     CrazyAutonote:
         description: Automatic Crazynote on join!
         permission: CrazyFeet.crazymagic.autonote
-        aliases: crazyautom
     CrazyAutoCheck:
         description: Check enabled automatic CrazyFeet modes!
     CrazyAutoDisable:
