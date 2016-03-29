@@ -17,6 +17,7 @@ import tk.acronus.CrazyFeet.Util.Files.CrazyAutoFireFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoMagicFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoPearlFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoSmokeFile;
+import tk.acronus.CrazyFeet.Util.Files.CrazyAutonoteFile;
 
 /**
  * @author Pete Wicken
@@ -31,6 +32,7 @@ public class CrazyAutoCheck implements CommandExecutor {
 	private final ArrayList<String> cSPlayers = CrazyAutoSmokeFile.cSPlayers;
 	private final ArrayList<String> cPPlayers = CrazyAutoPearlFile.cPPlayers;
 	private final ArrayList<String> cMPlayers = CrazyAutoMagicFile.cMPlayers;
+	private final ArrayList<String> cNPlayers = CrazyAutonoteFile.cNPlayers;
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String CommandLabel, String[] args){
 		if(args.length < 1) {
@@ -45,6 +47,11 @@ public class CrazyAutoCheck implements CommandExecutor {
 					}
 					if(cSPlayers.contains(player.getName())) {
 						player.sendMessage("- CrazySmoke");
+					} else {
+						//return true;
+					}
+					if(cNPlayers.contains(player.getName())) {
+						player.sendMessage("- Crazynote");
 					} else {
 						//return true;
 					}
@@ -81,6 +88,11 @@ public class CrazyAutoCheck implements CommandExecutor {
 					}
 					if(cSPlayers.contains(targ.getName())) {
 						sender.sendMessage("- CrazySmoke");
+					} else {
+						//return true;
+					}
+					if(cNPlayers.contains(targ.getName())) {
+						sender.sendMessage("- Crazynote");
 					} else {
 						//return true;
 					}

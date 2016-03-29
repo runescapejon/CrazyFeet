@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tk.acronus.CrazyFeet.Commands.Util;
 
 import java.util.ArrayList;
@@ -15,10 +12,6 @@ import org.bukkit.entity.Player;
 
 import tk.acronus.CrazyFeet.CrazyFeet;
 
-/**
- * @author Pete Wicken
- *
- */
 public class CrazyCheckCommands implements CommandExecutor {
 
 	public boolean onCommand(CommandSender sender, Command cmd, String commandlabel, String[] args) {
@@ -29,6 +22,7 @@ public class CrazyCheckCommands implements CommandExecutor {
 		final ArrayList<Player> cSmoke = CrazyFeet.CrazySmoke;
 		final ArrayList<Player> cMagic = CrazyFeet.CrazyMagic;
 		final ArrayList<Player> cPearl = CrazyFeet.CrazyPearl;
+		final ArrayList<Player> cnote = CrazyFeet.Crazynote;
 		
 		if(args.length < 1) {
 			if(sender instanceof Player) {
@@ -47,6 +41,11 @@ public class CrazyCheckCommands implements CommandExecutor {
 					}
 					if(cMagic.contains(player)) {
 						player.sendMessage("- CrazyMagic");
+					} else {
+						//return true;
+					}
+					if(cnote.contains(player)) {
+						player.sendMessage("- Crazynote");
 					} else {
 						//return true;
 					}
@@ -86,6 +85,11 @@ public class CrazyCheckCommands implements CommandExecutor {
 					}
 					if(cMagic.contains(targ)) {
 						sender.sendMessage("- CrazyMagic");
+					} else {
+						//return true;
+					}
+					if(cnote.contains(targ)) {
+						sender.sendMessage("- Crazynote");
 					} else {
 						//return true;
 					}

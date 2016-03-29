@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tk.acronus.CrazyFeet.Util.Files;
 
 import java.io.BufferedReader;
@@ -15,10 +12,6 @@ import java.util.ArrayList;
 
 import org.bukkit.entity.Player;
 
-/**
- * @author Pete Wicken
- *
- */
 public class CrazyAutoFireFile {
 	
 	private final File auCrazyFirePlayers;

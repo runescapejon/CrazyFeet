@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tk.acronus.CrazyFeet.Commands;
 
 import java.util.ArrayList;

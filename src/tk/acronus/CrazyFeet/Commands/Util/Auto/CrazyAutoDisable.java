@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tk.acronus.CrazyFeet.Commands.Util.Auto;
 
 import java.util.ArrayList;
@@ -18,11 +15,8 @@ import tk.acronus.CrazyFeet.Util.Files.CrazyAutoFireFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoMagicFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoPearlFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoSmokeFile;
+import tk.acronus.CrazyFeet.Util.Files.CrazyAutonoteFile;
 
-/**
- * @author Pete Wicken
- *
- */
 public class CrazyAutoDisable implements CommandExecutor {
 	
 	private CrazyFeet p;
@@ -38,6 +32,7 @@ public class CrazyAutoDisable implements CommandExecutor {
 	public final ArrayList<String> cSPlayers = CrazyAutoSmokeFile.cSPlayers;
 	public final ArrayList<String> cPPlayers = CrazyAutoPearlFile.cPPlayers;
 	public final ArrayList<String> cMPlayers = CrazyAutoMagicFile.cMPlayers;
+	public final ArrayList<String> cNPlayers = CrazyAutonoteFile.cNPlayers;
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String CommandLabel, String[] args){
 
@@ -52,6 +47,11 @@ public class CrazyAutoDisable implements CommandExecutor {
 					}
 					if(cSPlayers.contains(player.getName())) {
 						cSPlayers.remove(player.getName());
+					} else {
+						//return true;
+					}
+					if(cNPlayers.contains(player.getName())) {
+						cNPlayers.remove(player.getName());
 					} else {
 						//return true;
 					}
@@ -86,6 +86,8 @@ public class CrazyAutoDisable implements CommandExecutor {
 					p.getAPearlPlayers().saveAutoPearlPlayers();
 					cMPlayers.remove(p.getAMagicPlayers());
 					p.getAMagicPlayers().saveAutoMagicPlayers();
+					cNPlayers.remove(p.getAnotePlayers());
+					p.getAnotePlayers().saveAutonotePlayers();
 					Bukkit.getServer().broadcastMessage(red+sender.getName()+yellow+" has disabled everyone's automatic CrazyFeet modes!");
 					return true;
 				}
@@ -99,6 +101,11 @@ public class CrazyAutoDisable implements CommandExecutor {
 					}
 					if(cSPlayers.contains(targ.getName())) {
 						cSPlayers.remove(targ.getName());
+					} else {
+						//return true;
+					}
+					if(cNPlayers.contains(targ.getName())) {
+						cNPlayers.remove(targ.getName());
 					} else {
 						//return true;
 					}

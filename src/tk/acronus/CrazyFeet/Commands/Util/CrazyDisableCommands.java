@@ -1,26 +1,17 @@
-/**
- * 
- */
 package tk.acronus.CrazyFeet.Commands.Util;
 
 import java.util.ArrayList;
-
-
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
 import tk.acronus.CrazyFeet.CrazyFeet;
 
-/**
- * @author Pete Wicken
- *
- */
 public class CrazyDisableCommands implements CommandExecutor {
 	
+	@SuppressWarnings("deprecation")
 	public boolean onCommand(CommandSender sender, Command cmd, String CommandLabel, String[] args){
 		
 		final ChatColor yellow = ChatColor.YELLOW;
@@ -29,6 +20,7 @@ public class CrazyDisableCommands implements CommandExecutor {
 		final ArrayList<Player> cSmoke = CrazyFeet.CrazySmoke;
 		final ArrayList<Player> cMagic = CrazyFeet.CrazyMagic;
 		final ArrayList<Player> cPearl = CrazyFeet.CrazyPearl;
+		final ArrayList<Player> cnote = CrazyFeet.Crazynote;
 		
 		if(args.length < 1) {
 			if(sender instanceof Player) {
@@ -41,6 +33,11 @@ public class CrazyDisableCommands implements CommandExecutor {
 					}
 					if(cSmoke.contains(player)) {
 						cSmoke.remove(player);
+					} else {
+						//return true;
+					}
+					if(cnote.contains(player)) {
+						cnote.remove(player);
 					} else {
 						//return true;
 					}
@@ -78,6 +75,11 @@ public class CrazyDisableCommands implements CommandExecutor {
 						} else {
 							//return true;
 						}
+						if(cnote.contains(onlinePlayers)) {
+							cnote.remove(onlinePlayers);
+						} else {
+							//return true;
+						}
 						if(cMagic.contains(onlinePlayers)) {
 							cMagic.remove(onlinePlayers);
 						} else {
@@ -105,6 +107,11 @@ public class CrazyDisableCommands implements CommandExecutor {
 					}
 					if(cMagic.contains(targ)) {
 						cMagic.remove(targ);
+					} else {
+						//return true;
+					}
+					if(cnote.contains(targ)) {
+						cnote.remove(targ);
 					} else {
 						//return true;
 					}

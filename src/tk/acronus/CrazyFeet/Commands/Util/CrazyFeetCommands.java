@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tk.acronus.CrazyFeet.Commands.Util;
 
 import org.bukkit.ChatColor;
@@ -8,10 +5,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-/**
- * @author Pete Wicken
- *
- */
 public class CrazyFeetCommands implements CommandExecutor {
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String commandlabel, String[] args) {
@@ -22,10 +15,10 @@ public class CrazyFeetCommands implements CommandExecutor {
 		final ChatColor purple = ChatColor.DARK_PURPLE;
 		
 		if(args.length < 1) {
-			sender.sendMessage(purple+"CrazyFeet"+yellow+" - By"+green+" PWicks23");
 			sender.sendMessage(yellow+"Availiable commands:");
 			sender.sendMessage(yellow+"CrazyFeet modes:");
 			sender.sendMessage(yellow+"-"+green+" /crazyfire"+yellow+" - Walk on fire!");
+			sender.sendMessage(yellow+"-"+green+" /crazynote"+yellow+" - Walk on notes!");
 			sender.sendMessage(yellow+"-"+green+" /crazysmoke"+yellow+" - Walk on smoke!");
 			sender.sendMessage(yellow+"-"+green+" /crazymagic"+yellow+" - Walk on magic dust!");
 			sender.sendMessage(yellow+"-"+green+" /crazypearl"+yellow+" - Walk on pearls!");
@@ -35,6 +28,7 @@ public class CrazyFeetCommands implements CommandExecutor {
 			sender.sendMessage(yellow+"-"+green+" /crazyautosmoke"+yellow+" - Automatic CrazySmoke on server join!");
 			sender.sendMessage(yellow+"-"+green+" /crazyautomagic"+yellow+" - Automatic CrazyMagic on server join!");
 			sender.sendMessage(yellow+"-"+green+" /crazyautopearl"+yellow+" - Automatic CrazyPearl on server join!");
+			sender.sendMessage(yellow+"-"+green+" /crazyautonote"+yellow+" - Automatic CrazyNote on server join!");
 			sender.sendMessage(yellow+"CrazyFeet help:");
 			sender.sendMessage(yellow+"-"+green+" /crazyfeet"+yellow+" - Display this menu.");
 			sender.sendMessage(yellow+"-"+green+" /crazycheck"+yellow+" - Check what CrazyFeet modes are active!");
@@ -49,6 +43,7 @@ public class CrazyFeetCommands implements CommandExecutor {
 				if(sender.hasPermission("CrazyFeet.admin")) {
 					sender.sendMessage(purple+"CrazyFeet"+yellow+" - By"+green+" PWicks23");
 					sender.sendMessage(red+"~ Admin menu ~");
+					sender.sendMessage(yellow+"-"+green+" /crazynote <target>"+yellow+" - Toggle Crazynote on target player!");
 					sender.sendMessage(yellow+"-"+green+" /crazyfire <target>"+yellow+" - Toggle CrazyFire on target player!");
 					sender.sendMessage(yellow+"-"+green+" /crazysmoke <target>"+yellow+" - Toggle CrazySmoke on target player!");
 					sender.sendMessage(yellow+"-"+green+" /crazypearl <target>"+yellow+" - Toggle CrazyPearl on target player!");

@@ -79,6 +79,28 @@ public class CrazyFeetListener implements Listener {
 	}
 
 	@EventHandler
+	public void onCrazynoteMove(PlayerMoveEvent pME) {
+		
+		Player player = pME.getPlayer();
+		
+		if(CrazyFeet.Crazynote.contains(player)) {
+			
+			Location to = pME.getTo();
+			Location from = pME.getFrom();
+			Location loc = player.getLocation();
+			
+			if(to.getX() != from.getBlockX() || to.getY() != from.getY() || to.getZ() != from.getZ()) {
+				loc.setY(loc.getY());
+				player.getWorld().playEffect(loc, Effect.NOTE, 1, 100);
+			} else {
+				pME.setCancelled(false);
+			}
+		} else {
+			pME.setCancelled(false);
+		}
+	}
+
+	@EventHandler
 	public void onCrazyPearlMove(PlayerMoveEvent pME) {
 		
 		Player player = pME.getPlayer();

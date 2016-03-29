@@ -14,11 +14,9 @@ import tk.acronus.CrazyFeet.Util.Files.CrazyAutoFireFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoMagicFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoPearlFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoSmokeFile;
+import tk.acronus.CrazyFeet.Util.Files.CrazyAutonoteFile;
 
-/**
- * @author Pete Wicken
- *
- */
+
 public class CrazyFeetJoinListener implements Listener {
 	
 	ChatColor green = ChatColor.GREEN;
@@ -49,8 +47,19 @@ public class CrazyFeetJoinListener implements Listener {
 	public void onCrazyPearlJoin(PlayerJoinEvent pJE) {
 		Player player = pJE.getPlayer();
 		if(CrazyAutoPearlFile.cPPlayers.contains(player.getName())) {
-			CrazyFeet.CrazySmoke.add(player);
+			CrazyFeet.CrazyPearl.add(player);
 			player.sendMessage(green+"You have joined the game with automatic CrazyPearl. To disable this, type /crazyautopearl");
+		} else {
+			//doNothing
+		}
+	}
+	
+	@EventHandler
+	public void onCrazynoteJoin(PlayerJoinEvent pJE) {
+		Player player = pJE.getPlayer();
+		if(CrazyAutonoteFile.cNPlayers.contains(player.getName())) {
+			CrazyFeet.Crazynote.add(player);
+			player.sendMessage(green+"You have joined the game with automatic CrazyNote. To disable this, type /crazyautonote");
 		} else {
 			//doNothing
 		}
