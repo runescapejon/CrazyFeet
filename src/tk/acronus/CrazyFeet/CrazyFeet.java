@@ -13,7 +13,9 @@ import tk.acronus.CrazyFeet.Commands.CrazyMagicCommands;
 import tk.acronus.CrazyFeet.Commands.CrazyPearlCommands;
 import tk.acronus.CrazyFeet.Commands.CrazySmokeCommands;
 import tk.acronus.CrazyFeet.Commands.CrazynoteCommands;
+import tk.acronus.CrazyFeet.Commands.CrazyWitchCommands;
 import tk.acronus.CrazyFeet.Commands.Auto.CrazyAutoFire;
+import tk.acronus.CrazyFeet.Commands.Auto.CrazyAutoWitch;
 import tk.acronus.CrazyFeet.Commands.Auto.CrazyAutoMagic;
 import tk.acronus.CrazyFeet.Commands.Auto.CrazyAutoPearl;
 import tk.acronus.CrazyFeet.Commands.Auto.CrazyAutoSmoke;
@@ -28,6 +30,8 @@ import tk.acronus.CrazyFeet.Util.Files.CrazyAutoMagicFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoPearlFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoSmokeFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutonoteFile;
+import tk.acronus.CrazyFeet.Util.Files.CrazyAutoWitchFile;
+
 
 public class CrazyFeet extends JavaPlugin {
 	
@@ -39,12 +43,14 @@ public class CrazyFeet extends JavaPlugin {
 	public static ArrayList<Player> CrazyMagic;
 	public static ArrayList<Player> CrazyPearl;
 	public static ArrayList<Player> Crazynote;
+	public static ArrayList<Player> CrazyWitch;
 	
 	public static ArrayList<String> cFPlayers;
 	public static ArrayList<String> cSPlayers;
 	public static ArrayList<String> cPPlayers;
 	public static ArrayList<String> cMPlayers;
 	public static ArrayList<String> cNPlayers;
+	public static ArrayList<String> cWPlayers;
 	
 	public final ChatColor red = ChatColor.RED;
 	public final ChatColor yellow = ChatColor.YELLOW;
@@ -60,11 +66,13 @@ public class CrazyFeet extends JavaPlugin {
 	private CrazyMagicCommands cMagicC;
 	private CrazyPearlCommands cPearlC;
 	private CrazynoteCommands cnote;
+	private CrazyWitchCommands cWitch;
 	
 	private CrazyAutoFire cAutoFire;
 	private CrazyAutoSmoke cAutoSmoke;
 	private CrazyAutoPearl cAutoPearl;
 	private CrazyAutoMagic cAutoMagic;
+	private CrazyAutoWitch cAutoWitch;
 	private CrazyAutonote cAutonote;
 	
 	private CrazyAutoCheck cAutoCheck;
@@ -75,12 +83,14 @@ public class CrazyFeet extends JavaPlugin {
 	public static CrazyAutoPearlFile aPearlP;
 	public static CrazyAutoMagicFile aMagicP;
 	public static CrazyAutonoteFile anoteP;
+	public static CrazyAutoWitchFile aWitchP;
 
 	private File autoFirePlayers;
 	private File autoSmokePlayers;
 	private File autoPearlPlayers;
 	private File autoMagicPlayers;
 	private File autonotePlayers;
+	private File autoWitchPlayers;
 
 	@Override
 	public void onEnable() {
@@ -92,18 +102,21 @@ public class CrazyFeet extends JavaPlugin {
 		CrazyMagic = new ArrayList<Player>();
 		CrazyPearl = new ArrayList<Player>();
 		Crazynote = new ArrayList<Player>();
+		CrazyWitch = new ArrayList<Player>();
 		
 		cNPlayers = CrazyAutonoteFile.cNPlayers;
 		cFPlayers = CrazyAutoFireFile.cFPlayers;
 		cSPlayers = CrazyAutoSmokeFile.cSPlayers;
 		cPPlayers = CrazyAutoPearlFile.cPPlayers;
 		cMPlayers = CrazyAutoMagicFile.cMPlayers;
+		cWPlayers = CrazyAutoWitchFile.cWPlayers;
 		
 		cFireC = new CrazyFireCommands();
 		cSmokeC = new CrazySmokeCommands();
 		cMagicC = new CrazyMagicCommands();
 		cPearlC = new CrazyPearlCommands();
 		cnote = new CrazynoteCommands();
+		cWitch = new CrazyWitchCommands();
 		
 		cFeetC = new CrazyFeetCommands();
 		cCheckC = new CrazyCheckCommands();
@@ -114,6 +127,7 @@ public class CrazyFeet extends JavaPlugin {
 		cAutoPearl = new CrazyAutoPearl(this);
 		cAutoMagic = new CrazyAutoMagic(this);
 		cAutonote = new CrazyAutonote(this);
+		cAutoWitch = new CrazyAutoWitch(this);
 		
 		cAutoCheck = new CrazyAutoCheck();
 		cAutoDisable = new CrazyAutoDisable(this);
@@ -127,12 +141,14 @@ public class CrazyFeet extends JavaPlugin {
 		getCommand("CrazyMagic").setExecutor(cMagicC);
 		getCommand("CrazyPearl").setExecutor(cPearlC);
 		getCommand("Crazynote").setExecutor(cnote);
+		getCommand("CrazyWitch").setExecutor(cWitch);
 		
 		getCommand("CrazyAutoFire").setExecutor(cAutoFire);
 		getCommand("CrazyAutoSmoke").setExecutor(cAutoSmoke);
 		getCommand("CrazyAutoPearl").setExecutor(cAutoPearl);
 		getCommand("CrazyAutoMagic").setExecutor(cAutoMagic);
 		getCommand("CrazyAutonote").setExecutor(cAutonote);
+		getCommand("CrazyAutoWitch").setExecutor(cAutoWitch);
 
 		getCommand("CrazyAutoCheck").setExecutor(cAutoCheck);
 		getCommand("CrazyAutoDisable").setExecutor(cAutoDisable);
@@ -149,18 +165,21 @@ public class CrazyFeet extends JavaPlugin {
 		autoPearlPlayers = new File(folder+File.separator+"AutoPearlPlayers.txt");
 		autoMagicPlayers = new File(folder+File.separator+"AutoMagicPlayers.txt");
 		autonotePlayers = new File(folder+File.separator+"AutonotePlayers.txt");
+		autoWitchPlayers = new File(folder+File.separator+"AutoWitchPlayers.txt");
 		
 		aFireP = new CrazyAutoFireFile(autoFirePlayers);
 		aSmokeP = new CrazyAutoSmokeFile(autoSmokePlayers);
 		aPearlP = new CrazyAutoPearlFile(autoPearlPlayers);
 		aMagicP = new CrazyAutoMagicFile(autoMagicPlayers);
 		anoteP = new CrazyAutonoteFile(autonotePlayers);
+		aWitchP = new CrazyAutoWitchFile(autoWitchPlayers);
 		
 		aFireP.loadAutoFirePlayers();
 		aSmokeP.loadAutoSmokePlayers();
 		aPearlP.loadAutoPearlPlayers();
 		aMagicP.loadAutoMagicPlayers();
 		anoteP.loadAutonotePlayers();
+		aWitchP.loadAutoWitchPlayers();
 	}
 
 	@Override
@@ -185,6 +204,10 @@ public class CrazyFeet extends JavaPlugin {
 
 	public CrazyAutoPearlFile getAPearlPlayers() {
 		return aPearlP;
+	}
+
+	public CrazyAutoWitchFile getAWitchPlayers() {
+		return aWitchP;
 	}
 	
 	public CrazyAutoMagicFile getAMagicPlayers() {

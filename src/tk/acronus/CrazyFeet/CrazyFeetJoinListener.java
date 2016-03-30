@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tk.acronus.CrazyFeet;
 
 
@@ -15,6 +12,7 @@ import tk.acronus.CrazyFeet.Util.Files.CrazyAutoMagicFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoPearlFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoSmokeFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutonoteFile;
+import tk.acronus.CrazyFeet.Util.Files.CrazyAutoWitchFile;
 
 
 public class CrazyFeetJoinListener implements Listener {
@@ -53,7 +51,18 @@ public class CrazyFeetJoinListener implements Listener {
 			//doNothing
 		}
 	}
-	
+
+	@EventHandler
+	public void onCrazyWitchJoin(PlayerJoinEvent pJE) {
+		Player player = pJE.getPlayer();
+		if(CrazyAutoWitchFile.cWPlayers.contains(player.getName())) {
+			CrazyFeet.CrazyWitch.add(player);
+			player.sendMessage(green+"You have joined the game with automatic CrazyWitch. To disable this, type /crazyautowitch");
+		} else {
+			//doNothing
+		}
+	}
+
 	@EventHandler
 	public void onCrazynoteJoin(PlayerJoinEvent pJE) {
 		Player player = pJE.getPlayer();

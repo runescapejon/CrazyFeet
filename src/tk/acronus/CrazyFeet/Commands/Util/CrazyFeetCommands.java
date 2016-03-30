@@ -12,7 +12,6 @@ public class CrazyFeetCommands implements CommandExecutor {
 		final ChatColor yellow = ChatColor.YELLOW;
 		final ChatColor green = ChatColor.GREEN;
 		final ChatColor red = ChatColor.RED;
-		final ChatColor purple = ChatColor.DARK_PURPLE;
 		
 		if(args.length < 1) {
 			sender.sendMessage(yellow+"Availiable commands:");
@@ -41,7 +40,6 @@ public class CrazyFeetCommands implements CommandExecutor {
 		} else if(args.length == 1) {
 			if(args[0].equalsIgnoreCase("admin")) {
 				if(sender.hasPermission("CrazyFeet.admin")) {
-					sender.sendMessage(purple+"CrazyFeet"+yellow+" - By"+green+" PWicks23");
 					sender.sendMessage(red+"~ Admin menu ~");
 					sender.sendMessage(yellow+"-"+green+" /crazynote <target>"+yellow+" - Toggle Crazynote on target player!");
 					sender.sendMessage(yellow+"-"+green+" /crazyfire <target>"+yellow+" - Toggle CrazyFire on target player!");

@@ -15,6 +15,7 @@ import tk.acronus.CrazyFeet.Util.Files.CrazyAutoFireFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoMagicFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoPearlFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoSmokeFile;
+import tk.acronus.CrazyFeet.Util.Files.CrazyAutoWitchFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutonoteFile;
 
 public class CrazyAutoDisable implements CommandExecutor {
@@ -33,6 +34,7 @@ public class CrazyAutoDisable implements CommandExecutor {
 	public final ArrayList<String> cPPlayers = CrazyAutoPearlFile.cPPlayers;
 	public final ArrayList<String> cMPlayers = CrazyAutoMagicFile.cMPlayers;
 	public final ArrayList<String> cNPlayers = CrazyAutonoteFile.cNPlayers;
+	public final ArrayList<String> cWPlayers = CrazyAutoWitchFile.cWPlayers;
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String CommandLabel, String[] args){
 
@@ -47,6 +49,11 @@ public class CrazyAutoDisable implements CommandExecutor {
 					}
 					if(cSPlayers.contains(player.getName())) {
 						cSPlayers.remove(player.getName());
+					} else {
+						//return true;
+					}
+					if(cWPlayers.contains(player.getName())) {
+						cWPlayers.remove(player.getName());
 					} else {
 						//return true;
 					}
@@ -80,6 +87,8 @@ public class CrazyAutoDisable implements CommandExecutor {
 				if(sender.hasPermission("CrazyFeet.autodisableothers.disableall")) {
 					cFPlayers.remove(p.getAFirePlayers());
 					p.getAFirePlayers().saveAutoFirePlayers();
+					cWPlayers.remove(p.getAWitchPlayers());
+					p.getAWitchPlayers().saveAutoWitchPlayers();
 					cSPlayers.remove(p.getASmokePlayers());
 					p.getASmokePlayers().saveAutoSmokePlayers();
 					cPPlayers.remove(p.getAPearlPlayers());
@@ -106,6 +115,11 @@ public class CrazyAutoDisable implements CommandExecutor {
 					}
 					if(cNPlayers.contains(targ.getName())) {
 						cNPlayers.remove(targ.getName());
+					} else {
+						//return true;
+					}
+					if(cWPlayers.contains(targ.getName())) {
+						cWPlayers.remove(targ.getName());
 					} else {
 						//return true;
 					}

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tk.acronus.CrazyFeet.Commands;
 
 import java.util.ArrayList;
@@ -15,10 +12,6 @@ import org.bukkit.entity.Player;
 
 import tk.acronus.CrazyFeet.CrazyFeet;
 
-/**
- * @author Pete Wicken
- *
- */
 public class CrazyFireCommands implements CommandExecutor{
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String CommandLabel, String[] args){
