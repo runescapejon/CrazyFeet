@@ -21,6 +21,8 @@ public class CrazyFeetCommands implements CommandExecutor {
 			sender.sendMessage(yellow+"-"+green+" /crazysmoke"+yellow+" - Walk on smoke!");
 			sender.sendMessage(yellow+"-"+green+" /crazymagic"+yellow+" - Walk on magic dust!");
 			sender.sendMessage(yellow+"-"+green+" /crazypearl"+yellow+" - Walk on pearls!");
+			sender.sendMessage(yellow+"-"+green+" /crazynote"+yellow+" - Walk on notes!");
+			sender.sendMessage(yellow+"-"+green+" /crazywitch"+yellow+" - Walk on witches magic!!");
 			sender.sendMessage(yellow+"CrazyFeet automatic modes:");
 			sender.sendMessage(yellow+"These allow you to have the CrazyFeet modes enabled when joining!");
 			sender.sendMessage(yellow+"-"+green+" /crazyautofire"+yellow+" - Automatic CrazyFire on server join!");
@@ -28,6 +30,7 @@ public class CrazyFeetCommands implements CommandExecutor {
 			sender.sendMessage(yellow+"-"+green+" /crazyautomagic"+yellow+" - Automatic CrazyMagic on server join!");
 			sender.sendMessage(yellow+"-"+green+" /crazyautopearl"+yellow+" - Automatic CrazyPearl on server join!");
 			sender.sendMessage(yellow+"-"+green+" /crazyautonote"+yellow+" - Automatic CrazyNote on server join!");
+			sender.sendMessage(yellow+"-"+green+" /crazyautowitch"+yellow+" - Automatic CrazyWitch on server join!");
 			sender.sendMessage(yellow+"CrazyFeet help:");
 			sender.sendMessage(yellow+"-"+green+" /crazyfeet"+yellow+" - Display this menu.");
 			sender.sendMessage(yellow+"-"+green+" /crazycheck"+yellow+" - Check what CrazyFeet modes are active!");
@@ -46,6 +49,8 @@ public class CrazyFeetCommands implements CommandExecutor {
 					sender.sendMessage(yellow+"-"+green+" /crazysmoke <target>"+yellow+" - Toggle CrazySmoke on target player!");
 					sender.sendMessage(yellow+"-"+green+" /crazypearl <target>"+yellow+" - Toggle CrazyPearl on target player!");
 					sender.sendMessage(yellow+"-"+green+" /crazymagic <target>"+yellow+" - Toggle CrazyMagic on target player!");
+					sender.sendMessage(yellow+"-"+green+" /crazywitch <target>"+yellow+" - Toggle Crazywitch on target player!");
+					sender.sendMessage(yellow+"-"+green+" /crazynote <target>"+yellow+" - Toggle Crazynote on target player!");
 					sender.sendMessage(yellow+"-"+green+" /crazycheck <target>"+yellow+" - Check target's CrazyFeet modes!");
 					sender.sendMessage(yellow+"-"+green+" /crazyautocheck <target>"+yellow+" - Check target's automatic CrazyFeet modes!");
 					sender.sendMessage(yellow+"-"+green+" /crazydisable <target>"+yellow+" - Turn off all CrazyFeet modes on target player!");
