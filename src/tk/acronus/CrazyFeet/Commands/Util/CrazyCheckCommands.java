@@ -23,6 +23,7 @@ public class CrazyCheckCommands implements CommandExecutor {
 		final ArrayList<Player> cMagic = CrazyFeet.CrazyMagic;
 		final ArrayList<Player> cPearl = CrazyFeet.CrazyPearl;
 		final ArrayList<Player> cnote = CrazyFeet.Crazynote;
+		final ArrayList<Player> cHeart = CrazyFeet.Crazynote;
 		
 		if(args.length < 1) {
 			if(sender instanceof Player) {
@@ -36,6 +37,11 @@ public class CrazyCheckCommands implements CommandExecutor {
 					}
 					if(cSmoke.contains(player)) {
 						player.sendMessage("- CrazySmoke");
+					} else {
+						//return true;
+					}
+					if(cHeart.contains(player)) {
+						player.sendMessage("- CrazyHeart");
 					} else {
 						//return true;
 					}
@@ -90,6 +96,11 @@ public class CrazyCheckCommands implements CommandExecutor {
 					}
 					if(cnote.contains(targ)) {
 						sender.sendMessage("- Crazynote");
+					} else {
+						//return true;
+					}
+					if(cHeart.contains(targ)) {
+						sender.sendMessage("- CrazyHeart");
 					} else {
 						//return true;
 					}

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tk.acronus.CrazyFeet.Commands.Util.Auto;
 
 import java.util.ArrayList;
@@ -19,11 +16,8 @@ import tk.acronus.CrazyFeet.Util.Files.CrazyAutoPearlFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoSmokeFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutonoteFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoWitchFile;
+import tk.acronus.CrazyFeet.Util.Files.CrazyAutoHeartFile;
 
-/**
- * @author Pete Wicken
- *
- */
 public class CrazyAutoCheck implements CommandExecutor {
 	
 	ChatColor red = ChatColor.RED;
@@ -35,12 +29,13 @@ public class CrazyAutoCheck implements CommandExecutor {
 	private final ArrayList<String> cMPlayers = CrazyAutoMagicFile.cMPlayers;
 	private final ArrayList<String> cNPlayers = CrazyAutonoteFile.cNPlayers;
 	private final ArrayList<String> cWPlayers = CrazyAutoWitchFile.cWPlayers;
+	private final ArrayList<String> HPPlayers = CrazyAutoHeartFile.HPPPlayers;
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String CommandLabel, String[] args){
 		if(args.length < 1) {
 			if(sender instanceof Player) {
 				Player player = (Player) sender;
-				if(player.hasPermission("CrazyFeet.crazyfire.autofire") || player.hasPermission("CrazyFeet.crazysmoke.autosmoke") || player.hasPermission("CrazyFeet.crazymagic.automagic") || player.hasPermission("CrazyFeet.crazypearl.autopearl")) {
+				if(player.hasPermission("CrazyFeet.crazyfire.autofire") || player.hasPermission("CrazyFeet.crazysmoke.autosmoke") || player.hasPermission("CrazyFeet.crazymagic.autoheart") || player.hasPermission("CrazyFeet.crazymagic.autowitch") || player.hasPermission("CrazyFeet.crazymagic.autonote") || player.hasPermission("CrazyFeet.crazymagic.automagic") || player.hasPermission("CrazyFeet.crazypearl.autopearl")) {
 					player.sendMessage(yellow+"Active Automatic CrazyFeet modes:");
 					if(cFPlayers.contains(player.getName())) {
 						player.sendMessage("- CrazyFire");
@@ -49,6 +44,11 @@ public class CrazyAutoCheck implements CommandExecutor {
 					}
 					if(cSPlayers.contains(player.getName())) {
 						player.sendMessage("- CrazySmoke");
+					} else {
+						//return true;
+					}
+					if(HPPlayers.contains(player.getName())) {
+						player.sendMessage("- CrazyHeart");
 					} else {
 						//return true;
 					}
@@ -115,6 +115,11 @@ public class CrazyAutoCheck implements CommandExecutor {
 					}
 					if(cPPlayers.contains(targ.getName())) {
 						sender.sendMessage("- CrazyPearl");
+					} else {
+						//return true;
+					}
+					if(HPPlayers.contains(targ.getName())) {
+						sender.sendMessage("- CrazyHeart");
 					} else {
 						//return true;
 					}

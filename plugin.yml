@@ -1,8 +1,8 @@
 main: tk.acronus.CrazyFeet.CrazyFeet
 name: CrazyFeet
-version: 1.3.4
+version: 1.3.5
 description: Walk with Style!
-author: PWicks23
+author: runescapejon
 permissions:
     CrazyFeet.*:
         default: op
@@ -13,7 +13,9 @@ permissions:
             CrazyFeet.crazypearl: true
             CrazyFeet.crazynote: true
             CrazyFeet.crazywitch: true
+            CrazyFeet.crazyheart: true
             CrazyFeet.crazyfire.autofire: true
+            CrazyFeet.crazyfire.autoHeart: true
             CrazyFeet.crazysmoke.autosmoke: true
             CrazyFeet.crazypearl.autopearl: true
             CrazyFeet.crazymagic.automagic: true
@@ -26,6 +28,7 @@ permissions:
         default: op
         children:
             CrazyFeet.crazyfireother: true
+            CrazyFeet.crazyheartother: true
             CrazyFeet.crazysmokeother: true
             CrazyFeet.crazypearlother: true
             CrazyFeet.crazymagicother: true
@@ -36,6 +39,7 @@ permissions:
             CrazyFeet.crazypearl.autopearlother: true
             CrazyFeet.crazymagic.automagicother: true
             CrazyFeet.crazywitch.autowitchother: true
+            CrazyFeet.crazywitch.autoheartother: true
             CrazyFeet.crazynote.autonoteother: true
             CrazyFeet.autodisableothers: true
             CrazyFeet.autocheckothers: true
@@ -57,7 +61,10 @@ commands:
         permission: CrazyFeet.crazypearl
     Crazynote:
         description: Walk on pearls!
-        permission: CrazyFeet.crazypearl
+        permission: CrazyFeet.crazyheart
+    Crazyheart:
+        description: Walk on HEARTS!
+        permission: CrazyFeet.crazyheart
     Crazywitch:
         description: Walk on pearls!
         permission: CrazyFeet.crazypearl
@@ -72,6 +79,10 @@ commands:
         description: Automatic CrazyFire on join!
         permission: CrazyFeet.crazyfire.autofire
         aliases: crazyautof
+    CrazyAutoHeart:
+        description: Automatic CrazyHeart on join!
+        permission: CrazyFeet.crazyHeart.autoHeart
+        aliases: crazyautoh
     CrazyAutoSmoke:
         description: Automatic CrazySmoke on join!
         permission: CrazyFeet.crazysmoke.autosmoke

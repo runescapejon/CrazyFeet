@@ -13,6 +13,7 @@ import tk.acronus.CrazyFeet.Util.Files.CrazyAutoPearlFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoSmokeFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutonoteFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoWitchFile;
+import tk.acronus.CrazyFeet.Util.Files.CrazyAutoHeartFile;
 
 
 public class CrazyFeetJoinListener implements Listener {
@@ -47,6 +48,17 @@ public class CrazyFeetJoinListener implements Listener {
 		if(CrazyAutoPearlFile.cPPlayers.contains(player.getName())) {
 			CrazyFeet.CrazyPearl.add(player);
 			player.sendMessage(green+"You have joined the game with automatic CrazyPearl. To disable this, type /crazyautopearl");
+		} else {
+			//doNothing
+		}
+	}
+
+	@EventHandler
+	public void onCrazyHeartJoin(PlayerJoinEvent pJE) {
+		Player player = pJE.getPlayer();
+		if(CrazyAutoHeartFile.HPPPlayers.contains(player.getName())) {
+			CrazyFeet.CrazyHeart.add(player);
+			player.sendMessage(green+"You have joined the game with automatic CrazyHeart. To disable this, type /crazyautoheart");
 		} else {
 			//doNothing
 		}

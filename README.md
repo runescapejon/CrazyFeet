@@ -1,5 +1,4 @@
 CrazyFeet
 =========
 
-continuation crazyfeet plugin from the original developer who made crazyfeet.
-Fork of the crazyfeet plugin, you can find here on spigot.
+A plugin I made for Minecraft around 6 months ago when I used to play. Adds particle effects for players.

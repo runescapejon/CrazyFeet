@@ -21,11 +21,12 @@ public class CrazyDisableCommands implements CommandExecutor {
 		final ArrayList<Player> cMagic = CrazyFeet.CrazyMagic;
 		final ArrayList<Player> cPearl = CrazyFeet.CrazyPearl;
 		final ArrayList<Player> cnote = CrazyFeet.Crazynote;
+		final ArrayList<Player> cHeart = CrazyFeet.CrazyHeart;
 		
 		if(args.length < 1) {
 			if(sender instanceof Player) {
 				Player player = (Player) sender;
-				if(player.hasPermission("CrazyFeet.crazyfire") || player.hasPermission("CrazyFeet.crazysmoke") || player.hasPermission("CrazyFeet.crazymagic") || player.hasPermission("CrazyFeet.crazypearl")) {
+				if(player.hasPermission("CrazyFeet.crazyfire.autofire") || player.hasPermission("CrazyFeet.crazysmoke.autosmoke") || player.hasPermission("CrazyFeet.crazymagic.autoheart") || player.hasPermission("CrazyFeet.crazymagic.autowitch") || player.hasPermission("CrazyFeet.crazymagic.autonote") || player.hasPermission("CrazyFeet.crazymagic.automagic") || player.hasPermission("CrazyFeet.crazypearl.autopearl")) {
 					if(cFire.contains(player)) {
 						cFire.remove(player);
 					} else {
@@ -33,6 +34,11 @@ public class CrazyDisableCommands implements CommandExecutor {
 					}
 					if(cSmoke.contains(player)) {
 						cSmoke.remove(player);
+					} else {
+						//return true;
+					}
+					if(cHeart.contains(player)) {
+						cHeart.remove(player);
 					} else {
 						//return true;
 					}
@@ -80,6 +86,11 @@ public class CrazyDisableCommands implements CommandExecutor {
 						} else {
 							//return true;
 						}
+						if(cHeart.contains(onlinePlayers)) {
+							cHeart.remove(onlinePlayers);
+						} else {
+							//return true;
+						}
 						if(cMagic.contains(onlinePlayers)) {
 							cMagic.remove(onlinePlayers);
 						} else {
@@ -107,6 +118,11 @@ public class CrazyDisableCommands implements CommandExecutor {
 					}
 					if(cMagic.contains(targ)) {
 						cMagic.remove(targ);
+					} else {
+						//return true;
+					}
+					if(cHeart.contains(targ)) {
+						cHeart.remove(targ);
 					} else {
 						//return true;
 					}

@@ -18,6 +18,7 @@ public class CrazyAutonote implements CommandExecutor {
 		p = instance;
 	}
 	
+
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
 		
 		ChatColor yellow = ChatColor.YELLOW;

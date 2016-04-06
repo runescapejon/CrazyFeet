@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tk.acronus.CrazyFeet.Util.Files;
 
 import java.io.BufferedReader;

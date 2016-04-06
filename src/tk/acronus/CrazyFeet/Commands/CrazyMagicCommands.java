@@ -12,10 +12,6 @@ import org.bukkit.entity.Player;
 
 import tk.acronus.CrazyFeet.CrazyFeet;
 
-/**
- * @author Pete Wicken
- *
- */
 public class CrazyMagicCommands implements CommandExecutor {
 
 	public boolean onCommand(CommandSender sender, Command cmd, String commandlabel, String[] args) {

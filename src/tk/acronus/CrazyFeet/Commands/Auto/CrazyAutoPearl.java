@@ -1,6 +1,3 @@
-/**
- * 
- */
 package tk.acronus.CrazyFeet.Commands.Auto;
 
 
@@ -13,10 +10,6 @@ import org.bukkit.entity.Player;
 
 import tk.acronus.CrazyFeet.CrazyFeet;
 
-/**
- * @author Pete Wicken
- *
- */
 public class CrazyAutoPearl implements CommandExecutor {
 
 	private CrazyFeet p;

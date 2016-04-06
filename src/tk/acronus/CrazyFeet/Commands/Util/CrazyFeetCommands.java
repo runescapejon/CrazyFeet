@@ -17,6 +17,7 @@ public class CrazyFeetCommands implements CommandExecutor {
 			sender.sendMessage(yellow+"Availiable commands:");
 			sender.sendMessage(yellow+"CrazyFeet modes:");
 			sender.sendMessage(yellow+"-"+green+" /crazyfire"+yellow+" - Walk on fire!");
+			sender.sendMessage(yellow+"-"+green+" /crazyheart"+yellow+" - Walk on Hearts!");
 			sender.sendMessage(yellow+"-"+green+" /crazynote"+yellow+" - Walk on notes!");
 			sender.sendMessage(yellow+"-"+green+" /crazysmoke"+yellow+" - Walk on smoke!");
 			sender.sendMessage(yellow+"-"+green+" /crazymagic"+yellow+" - Walk on magic dust!");
@@ -26,6 +27,7 @@ public class CrazyFeetCommands implements CommandExecutor {
 			sender.sendMessage(yellow+"CrazyFeet automatic modes:");
 			sender.sendMessage(yellow+"These allow you to have the CrazyFeet modes enabled when joining!");
 			sender.sendMessage(yellow+"-"+green+" /crazyautofire"+yellow+" - Automatic CrazyFire on server join!");
+			sender.sendMessage(yellow+"-"+green+" /crazyautoheart"+yellow+" - Automatic CrazyHeart on server join!");
 			sender.sendMessage(yellow+"-"+green+" /crazyautosmoke"+yellow+" - Automatic CrazySmoke on server join!");
 			sender.sendMessage(yellow+"-"+green+" /crazyautomagic"+yellow+" - Automatic CrazyMagic on server join!");
 			sender.sendMessage(yellow+"-"+green+" /crazyautopearl"+yellow+" - Automatic CrazyPearl on server join!");
@@ -50,6 +52,7 @@ public class CrazyFeetCommands implements CommandExecutor {
 					sender.sendMessage(yellow+"-"+green+" /crazypearl <target>"+yellow+" - Toggle CrazyPearl on target player!");
 					sender.sendMessage(yellow+"-"+green+" /crazymagic <target>"+yellow+" - Toggle CrazyMagic on target player!");
 					sender.sendMessage(yellow+"-"+green+" /crazywitch <target>"+yellow+" - Toggle Crazywitch on target player!");
+					sender.sendMessage(yellow+"-"+green+" /crazyheart <target>"+yellow+" - Toggle Crazyheart on target player!");
 					sender.sendMessage(yellow+"-"+green+" /crazynote <target>"+yellow+" - Toggle Crazynote on target player!");
 					sender.sendMessage(yellow+"-"+green+" /crazycheck <target>"+yellow+" - Check target's CrazyFeet modes!");
 					sender.sendMessage(yellow+"-"+green+" /crazyautocheck <target>"+yellow+" - Check target's automatic CrazyFeet modes!");
