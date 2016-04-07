@@ -22,7 +22,6 @@ public class CrazyFeetCommands implements CommandExecutor {
 			sender.sendMessage(yellow+"-"+green+" /crazysmoke"+yellow+" - Walk on smoke!");
 			sender.sendMessage(yellow+"-"+green+" /crazymagic"+yellow+" - Walk on magic dust!");
 			sender.sendMessage(yellow+"-"+green+" /crazypearl"+yellow+" - Walk on pearls!");
-			sender.sendMessage(yellow+"-"+green+" /crazynote"+yellow+" - Walk on notes!");
 			sender.sendMessage(yellow+"-"+green+" /crazywitch"+yellow+" - Walk on witches magic!!");
 			sender.sendMessage(yellow+"CrazyFeet automatic modes:");
 			sender.sendMessage(yellow+"These allow you to have the CrazyFeet modes enabled when joining!");

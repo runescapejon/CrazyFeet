@@ -35,7 +35,9 @@ import tk.acronus.CrazyFeet.Util.Files.CrazyAutonoteFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoWitchFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoHeartFile;
 
-public class CrazyFeet extends JavaPlugin {
+public class CrazyFeet 
+  extends JavaPlugin 
+  {
 	
 	public final CrazyFeetListener playerListener = new CrazyFeetListener();
 	public final CrazyFeetJoinListener playerJoinListener = new CrazyFeetJoinListener();

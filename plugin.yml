@@ -1,6 +1,6 @@
 main: tk.acronus.CrazyFeet.CrazyFeet
 name: CrazyFeet
-version: 1.3.5
+version: 1.3.7
 description: Walk with Style!
 author: runescapejon
 permissions:
@@ -21,7 +21,7 @@ permissions:
             CrazyFeet.crazymagic.automagic: true
             CrazyFeet.crazynote.autonote: true
             CrazyFeet.crazywitch.autowitch: true
-            CrazyFeet.crazywitch.autowitch: true
+            CrazyFeet.crazyheart.autoheart: true
             CrazyFeet.autodisableothers.disableall: true
             CrazyFeet.admin: true
     CrazyFeet.admin:
@@ -97,10 +97,12 @@ commands:
         aliases: crazyautom
     CrazyAutonote:
         description: Automatic Crazynote on join!
-        permission: CrazyFeet.crazymagic.autonote
+        permission: CrazyFeet.crazynote.autonote
+        aliases: crazyauton
     CrazyAutowitch:
-        description: Automatic Crazynote on join!
-        permission: CrazyFeet.crazymagic.autonote
+        description: Automatic CrazyWitch on join!
+        permission: CrazyFeet.crazywitch.autowitch
+        aliases: crazyautow
     CrazyAutoCheck:
         description: Check enabled automatic CrazyFeet modes!
     CrazyAutoDisable:

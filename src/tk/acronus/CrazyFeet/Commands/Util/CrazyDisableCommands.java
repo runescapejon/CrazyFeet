@@ -22,6 +22,7 @@ public class CrazyDisableCommands implements CommandExecutor {
 		final ArrayList<Player> cPearl = CrazyFeet.CrazyPearl;
 		final ArrayList<Player> cnote = CrazyFeet.Crazynote;
 		final ArrayList<Player> cHeart = CrazyFeet.CrazyHeart;
+		final ArrayList<Player> cWitch = CrazyFeet.CrazyWitch;
 		
 		if(args.length < 1) {
 			if(sender instanceof Player) {
@@ -39,6 +40,11 @@ public class CrazyDisableCommands implements CommandExecutor {
 					}
 					if(cHeart.contains(player)) {
 						cHeart.remove(player);
+					} else {
+						//return true;
+					}
+					if(cWitch.contains(player)) {
+						cWitch.remove(player);
 					} else {
 						//return true;
 					}
@@ -91,6 +97,11 @@ public class CrazyDisableCommands implements CommandExecutor {
 						} else {
 							//return true;
 						}
+						if(cWitch.contains(onlinePlayers)) {
+							cWitch.remove(onlinePlayers);
+						} else {
+							//return true;
+						}
 						if(cMagic.contains(onlinePlayers)) {
 							cMagic.remove(onlinePlayers);
 						} else {
@@ -123,6 +134,11 @@ public class CrazyDisableCommands implements CommandExecutor {
 					}
 					if(cHeart.contains(targ)) {
 						cHeart.remove(targ);
+					} else {
+						//return true;
+					}
+					if(cWitch.contains(targ)) {
+						cWitch.remove(targ);
 					} else {
 						//return true;
 					}

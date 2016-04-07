@@ -26,7 +26,7 @@ public class CrazyAutoWitch implements CommandExecutor {
 		if(args.length < 1) {
 			if(sender instanceof Player) {
 				Player player = (Player) sender;
-				if(player.hasPermission("CrazyFeet.crazyWitch.autoWitch")) {
+				if(player.hasPermission("CrazyFeet.crazywitch.autowitch")) {
 					if(p.getAWitchPlayers().contains(player.getName())) {
 						p.getAWitchPlayers().remove(player);
 						p.getAWitchPlayers().saveAutoWitchPlayers();

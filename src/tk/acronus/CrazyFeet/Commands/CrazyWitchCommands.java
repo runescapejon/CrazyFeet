@@ -42,7 +42,7 @@ public class CrazyWitchCommands implements CommandExecutor {
 				return true;
 			}
 		} else if(args.length == 1) {
-			if(sender.hasPermission("CrazyFeet.crazyWitchother")) {
+			if(sender.hasPermission("CrazyFeet.crazywitchother")) {
 				if(Bukkit.getServer().getPlayer(args[0]) != null) {
 					Player targ = Bukkit.getServer().getPlayer(args[0]);
 					if(cWitch.contains(targ)) {
