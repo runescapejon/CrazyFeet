@@ -1,4 +1,5 @@
 CrazyFeet
 =========
 
-A plugin I made for Minecraft around 6 months ago when I used to play. Adds particle effects for players.
+A plugin that adds particle effects for players.
+Continuation crazyfeet plugin.
