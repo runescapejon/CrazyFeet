@@ -17,6 +17,13 @@ public class CrazyDisableCommands implements CommandExecutor {
 		final ChatColor yellow = ChatColor.YELLOW;
 		final ChatColor red = ChatColor.RED;
 		final ArrayList<Player> cFire = CrazyFeet.CrazyFire;
+		final ArrayList<Player> cHFire = CrazyFeet.CrazyFireHead;
+		final ArrayList<Player> cHHeart = CrazyFeet.CrazyHeartHead;
+		final ArrayList<Player> cHSmoke = CrazyFeet.CrazySmokeHead;
+		final ArrayList<Player> cHMagic = CrazyFeet.CrazyMagicHead;
+		final ArrayList<Player> cHnote = CrazyFeet.CrazyNoteHead;
+		final ArrayList<Player> cHWitch = CrazyFeet.CrazyWitchHead;
+		final ArrayList<Player> cHPearl = CrazyFeet.CrazyPearlHead;
 		final ArrayList<Player> cSmoke = CrazyFeet.CrazySmoke;
 		final ArrayList<Player> cMagic = CrazyFeet.CrazyMagic;
 		final ArrayList<Player> cPearl = CrazyFeet.CrazyPearl;
@@ -27,9 +34,44 @@ public class CrazyDisableCommands implements CommandExecutor {
 		if(args.length < 1) {
 			if(sender instanceof Player) {
 				Player player = (Player) sender;
-				if(player.hasPermission("CrazyFeet.crazyfire.autofire") || player.hasPermission("CrazyFeet.crazysmoke.autosmoke") || player.hasPermission("CrazyFeet.crazymagic.autoheart") || player.hasPermission("CrazyFeet.crazymagic.autowitch") || player.hasPermission("CrazyFeet.crazymagic.autonote") || player.hasPermission("CrazyFeet.crazymagic.automagic") || player.hasPermission("CrazyFeet.crazypearl.autopearl")) {
+				if(player.hasPermission("CrazyFeet.crazyfire.autofire")|player.hasPermission("CrazyFeet.crazyfirehead.autofirehead") ||player.hasPermission("CrazyFeet.crazyhearthead.autohearthead") ||player.hasPermission("CrazyFeet.crazysmokehead.autosmokehead") ||player.hasPermission("CrazyFeet.crazymagichead.automagichead") ||player.hasPermission("CrazyFeet.crazypearlhead.autopearlhead") ||player.hasPermission("CrazyFeet.crazynotehead.autonotehead") ||player.hasPermission("CrazyFeet.crazymagichead.automagichead") || player.hasPermission("CrazyFeet.crazysmoke.autosmoke") || player.hasPermission("CrazyFeet.crazymagic.autoheart") || player.hasPermission("CrazyFeet.crazymagic.autowitch") || player.hasPermission("CrazyFeet.crazymagic.autonote") || player.hasPermission("CrazyFeet.crazymagic.automagic") || player.hasPermission("CrazyFeet.crazypearl.autopearl")) {
 					if(cFire.contains(player)) {
 						cFire.remove(player);
+					} else {
+						//return true;
+					}
+					if(cHFire.contains(player)) {
+						cHFire.remove(player);
+					} else {
+						//return true;
+					}
+					if(cHHeart.contains(player)) {
+						cHHeart.remove(player);
+					} else {
+						//return true;
+					}
+					if(cHSmoke.contains(player)) {
+						cHSmoke.remove(player);
+					} else {
+						//return true;
+					}
+					if(cHPearl.contains(player)) {
+						cHPearl.remove(player);
+					} else {
+						//return true;
+					}
+					if(cHnote.contains(player)) {
+						cHnote.remove(player);
+					} else {
+						//return true;
+					}
+					if(cHMagic.contains(player)) {
+						cHMagic.remove(player);
+					} else {
+						//return true;
+					}
+					if(cHWitch.contains(player)) {
+						cHWitch.remove(player);
 					} else {
 						//return true;
 					}
@@ -82,6 +124,41 @@ public class CrazyDisableCommands implements CommandExecutor {
 						} else {
 							//return true;
 						}
+						if(cHFire.contains(onlinePlayers)) {
+							cHFire.remove(onlinePlayers);
+						} else {
+							//return true;
+						}
+						if(cHHeart.contains(onlinePlayers)) {
+							cHHeart.remove(onlinePlayers);
+						} else {
+							//return true;
+						}
+						if(cHSmoke.contains(onlinePlayers)) {
+							cHSmoke.remove(onlinePlayers);
+						} else {
+							//return true;
+						}
+						if(cHPearl.contains(onlinePlayers)) {
+							cHPearl.remove(onlinePlayers);
+						} else {
+							//return true;
+						}
+						if(cHMagic.contains(onlinePlayers)) {
+							cHMagic.remove(onlinePlayers);
+						} else {
+							//return true;
+						}
+						if(cHnote.contains(onlinePlayers)) {
+							cHnote.remove(onlinePlayers);
+						} else {
+							//return true;
+						}
+						if(cHWitch.contains(onlinePlayers)) {
+							cHWitch.remove(onlinePlayers);
+						} else {
+							//return true;
+						}
 						if(cSmoke.contains(onlinePlayers)) {
 							cSmoke.remove(onlinePlayers);
 						} else {
@@ -119,6 +196,41 @@ public class CrazyDisableCommands implements CommandExecutor {
 					Player targ = Bukkit.getServer().getPlayer(args[0]);
 					if(cFire.contains(targ)) {
 						cFire.remove(targ);
+					} else {
+						//return true;
+					}
+					if(cHFire.contains(targ)) {
+						cHFire.remove(targ);
+					} else {
+						//return true;
+					}
+					if(cHHeart.contains(targ)) {
+						cHHeart.remove(targ);
+					} else {
+						//return true;
+					}
+					if(cHSmoke.contains(targ)) {
+						cHSmoke.remove(targ);
+					} else {
+						//return true;
+					}
+					if(cHPearl.contains(targ)) {
+						cHPearl.remove(targ);
+					} else {
+						//return true;
+					}
+					if(cHMagic.contains(targ)) {
+						cHMagic.remove(targ);
+					} else {
+						//return true;
+					}
+					if(cHnote.contains(targ)) {
+						cHnote.remove(targ);
+					} else {
+						//return true;
+					}
+					if(cHWitch.contains(targ)) {
+						cHWitch.remove(targ);
 					} else {
 						//return true;
 					}

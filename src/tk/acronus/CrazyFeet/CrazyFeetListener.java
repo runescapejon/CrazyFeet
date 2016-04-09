@@ -13,6 +13,97 @@ public class CrazyFeetListener implements Listener {
 	ChatColor green = ChatColor.GREEN;
 
 	@EventHandler
+	public void onCrazyFireMove1(PlayerMoveEvent pME) {
+		
+		Player player = pME.getPlayer();
+		
+		if(CrazyFeet.CrazyFireHead.contains(player)) {
+			
+				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.MOBSPAWNER_FLAMES, 1);
+			} else {
+				pME.setCancelled(false);
+			}
+		}
+
+	@EventHandler
+	public void onCrazyHeartHeadMove(PlayerMoveEvent pME) {
+		
+		Player player = pME.getPlayer();
+		
+		if(CrazyFeet.CrazyHeartHead.contains(player)) {
+			
+				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.HEART, 1);
+			} else {
+				pME.setCancelled(false);
+			}
+		}
+	
+	@EventHandler
+	public void onCrazyMagicHeadMove(PlayerMoveEvent pME) {
+		
+		Player player = pME.getPlayer();
+		
+		if(CrazyFeet.CrazyMagicHead.contains(player)) {
+			
+				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.POTION_SWIRL, 1, 100);
+			} else {
+				pME.setCancelled(false);
+			}
+		}
+
+	@EventHandler
+	public void onCrazyNoteHeadMove(PlayerMoveEvent pME) {
+		
+		Player player = pME.getPlayer();
+		
+		if(CrazyFeet.CrazyNoteHead.contains(player)) {
+			
+				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.NOTE, 10);
+			} else {
+				pME.setCancelled(false);
+			}
+		}
+
+	@EventHandler
+	public void onCrazyWitchHeadMove(PlayerMoveEvent pME) {
+		
+		Player player = pME.getPlayer();
+		
+		if(CrazyFeet.CrazyWitchHead.contains(player)) {
+			
+				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.WITCH_MAGIC, 10);
+			} else {
+				pME.setCancelled(false);
+			}
+		}
+
+	@EventHandler
+	public void onCrazySmokeHeadMove(PlayerMoveEvent pME) {
+		
+		Player player = pME.getPlayer();
+		
+		if(CrazyFeet.CrazySmokeHead.contains(player)) {
+			
+				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.SMOKE, 10);
+			} else {
+				pME.setCancelled(false);
+			}
+		}
+
+	@EventHandler
+	public void onCrazyPearlHeadMove(PlayerMoveEvent pME) {
+		
+		Player player = pME.getPlayer();
+		
+		if(CrazyFeet.CrazyPearlHead.contains(player)) {
+			
+				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.ENDER_SIGNAL, 1, 100);
+			} else {
+				pME.setCancelled(false);
+			}
+		}
+
+	@EventHandler
 	public void onCrazyFireMove(PlayerMoveEvent pME) {
 		
 		Player player = pME.getPlayer();
@@ -135,7 +226,7 @@ public class CrazyFeetListener implements Listener {
 			
 			if(to.getX() != from.getBlockX() || to.getY() != from.getY() || to.getZ() != from.getZ()) {
 				loc.setY(loc.getY());
-				player.getWorld().playEffect(loc, Effect.HEART, 10);
+				player.getWorld().playEffect(loc, Effect.HEART, 1);
 			} else {
 				pME.setCancelled(false);
 			}

@@ -8,6 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoFireFile;
+import tk.acronus.CrazyFeet.Util.Files.CrazyAutoFireHeadFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoMagicFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoPearlFile;
 import tk.acronus.CrazyFeet.Util.Files.CrazyAutoSmokeFile;
@@ -26,6 +27,17 @@ public class CrazyFeetJoinListener implements Listener {
 		if(CrazyAutoFireFile.cFPlayers.contains(player.getName())) {
 			CrazyFeet.CrazyFire.add(player);
 			player.sendMessage(green+"You have joined the game with automatic CrazyFire. To disable this, type /crazyautofire");
+		} else {
+			//doNothing
+		}
+	}
+	
+	@EventHandler
+	public void onCrazyFireHeadJoin(PlayerJoinEvent pJE) {	
+		Player player = pJE.getPlayer();	
+		if(CrazyAutoFireHeadFile.cFHPlayers.contains(player.getName())) {
+			CrazyFeet.CrazyFireHead.add(player);
+			player.sendMessage(green+"You have joined the game with automatic CrazyFirehaed. To disable this, type /crazyautofirehead");
 		} else {
 			//doNothing
 		}

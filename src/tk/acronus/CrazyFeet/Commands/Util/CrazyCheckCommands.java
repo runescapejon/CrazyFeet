@@ -19,6 +19,13 @@ public class CrazyCheckCommands implements CommandExecutor {
 		final ChatColor yellow = ChatColor.YELLOW;
 		final ChatColor red = ChatColor.RED;
 		final ArrayList<Player> cFire = CrazyFeet.CrazyFire;
+		final ArrayList<Player> cHFire = CrazyFeet.CrazyFireHead;
+		final ArrayList<Player> cHHeart = CrazyFeet.CrazyHeartHead;
+		final ArrayList<Player> cHMagic = CrazyFeet.CrazyMagicHead;
+		final ArrayList<Player> cHNote = CrazyFeet.CrazyNoteHead;
+		final ArrayList<Player> cHWitch = CrazyFeet.CrazyWitchHead;
+		final ArrayList<Player> cHSmoke = CrazyFeet.CrazySmokeHead;
+		final ArrayList<Player> cHPearl = CrazyFeet.CrazyPearlHead;
 		final ArrayList<Player> cSmoke = CrazyFeet.CrazySmoke;
 		final ArrayList<Player> cMagic = CrazyFeet.CrazyMagic;
 		final ArrayList<Player> cPearl = CrazyFeet.CrazyPearl;
@@ -28,10 +35,45 @@ public class CrazyCheckCommands implements CommandExecutor {
 		if(args.length < 1) {
 			if(sender instanceof Player) {
 				Player player = (Player) sender;
-				if(player.hasPermission("CrazyFeet.crazyfire") || player.hasPermission("CrazyFeet.crazysmoke") || player.hasPermission("CrazyFeet.crazymagic") || player.hasPermission("CrazyFeet.crazypearl")) {
+				if(player.hasPermission("CrazyFeet.crazyfire") |player.hasPermission("CrazyFeet.crazyfirehead") ||player.hasPermission("CrazyFeet.crazysmokehead") ||player.hasPermission("CrazyFeet.crazypearlhead") ||player.hasPermission("CrazyFeet.crazysmokehead") ||player.hasPermission("CrazyFeet.crazynotehead") ||player.hasPermission("CrazyFeet.crazymagichead") ||player.hasPermission("CrazyFeet.crazyhearthead") || player.hasPermission("CrazyFeet.crazysmoke") || player.hasPermission("CrazyFeet.crazymagic") || player.hasPermission("CrazyFeet.crazypearl")) {
 					player.sendMessage(yellow+"Active CrazyFeet modes:");
 					if(cFire.contains(player)) {
 						player.sendMessage("- CrazyFire");
+					} else {
+						//return true;
+					}
+					if(cHFire.contains(player)) {
+						player.sendMessage("- CrazyFireHead");
+					} else {
+						//return true;
+					}
+					if(cHHeart.contains(player)) {
+						player.sendMessage("- CrazyHeartHead");
+					} else {
+						//return true;
+					}
+					if(cHSmoke.contains(player)) {
+						player.sendMessage("- CrazySmokeHead");
+					} else {
+						//return true;
+					}
+					if(cHWitch.contains(player)) {
+						player.sendMessage("- CrazyWitchHead");
+					} else {
+						//return true;
+					}
+					if(cHPearl.contains(player)) {
+						player.sendMessage("- CrazyPearlHead");
+					} else {
+						//return true;
+					}
+					if(cHNote.contains(player)) {
+						player.sendMessage("- CrazyNoteHead");
+					} else {
+						//return true;
+					}
+					if(cHMagic.contains(player)) {
+						player.sendMessage("- CrazyMagicHead");
 					} else {
 						//return true;
 					}
@@ -81,6 +123,41 @@ public class CrazyCheckCommands implements CommandExecutor {
 					sender.sendMessage(yellow+targ.getDisplayName()+"'s active CrazyFeet modes:");
 					if(cFire.contains(targ)) {
 						sender.sendMessage("- CrazyFire");
+					} else {
+						//return true;
+					}
+					if(cHFire.contains(targ)) {
+						sender.sendMessage("- CrazyFireHead");
+					} else {
+						//return true;
+					}
+					if(cHHeart.contains(targ)) {
+						sender.sendMessage("- CrazyHeartHead");
+					} else {
+						//return true;
+					}
+					if(cHSmoke.contains(targ)) {
+						sender.sendMessage("- CrazySmokeHead");
+					} else {
+						//return true;
+					}
+					if(cHPearl.contains(targ)) {
+						sender.sendMessage("- CrazyPearlHead");
+					} else {
+						//return true;
+					}
+					if(cHMagic.contains(targ)) {
+						sender.sendMessage("- CrazyMagicHead");
+					} else {
+						//return true;
+					}
+					if(cHNote.contains(targ)) {
+						sender.sendMessage("- CrazyNoteHead");
+					} else {
+						//return true;
+					}
+					if(cHWitch.contains(targ)) {
+						sender.sendMessage("- CrazyWitchHead");
 					} else {
 						//return true;
 					}
