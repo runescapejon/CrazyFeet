@@ -3,6 +3,7 @@ package tk.acronus.CrazyFeet;
 import org.bukkit.ChatColor;
 import org.bukkit.Effect;
 import org.bukkit.Location;
+import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -20,9 +21,7 @@ public class CrazyFeetListener implements Listener {
 		if(CrazyFeet.CrazyFireHead.contains(player)) {
 			
 				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.MOBSPAWNER_FLAMES, 1);
-			} else {
-				pME.setCancelled(false);
-			}
+			}  
 		}
 
 	@EventHandler
@@ -32,10 +31,8 @@ public class CrazyFeetListener implements Listener {
 		
 		if(CrazyFeet.CrazyHeartHead.contains(player)) {
 			
-				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.HEART, 1);
-			} else {
-				pME.setCancelled(false);
-			}
+				player.getWorld().spawnParticle(Particle.HEART, player.getEyeLocation().add(0, 0.8, 0), 1 );
+			} 
 		}
 	
 	@EventHandler
@@ -45,10 +42,8 @@ public class CrazyFeetListener implements Listener {
 		
 		if(CrazyFeet.CrazyMagicHead.contains(player)) {
 			
-				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.POTION_SWIRL, 1, 100);
-			} else {
-				pME.setCancelled(false);
-			}
+				player.getWorld().spawnParticle(Particle.SPELL, player.getEyeLocation().add(0, 0.8, 0), 0);
+			}  
 		}
 
 	@EventHandler
@@ -58,10 +53,8 @@ public class CrazyFeetListener implements Listener {
 		
 		if(CrazyFeet.CrazyNoteHead.contains(player)) {
 			
-				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.NOTE, 10);
-			} else {
-				pME.setCancelled(false);
-			}
+				player.getWorld().spawnParticle(Particle.NOTE, player.getEyeLocation().add(0, 0.8, 0), 10);
+			}  
 		}
 
 	@EventHandler
@@ -71,10 +64,8 @@ public class CrazyFeetListener implements Listener {
 		
 		if(CrazyFeet.CrazyWitchHead.contains(player)) {
 			
-				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.WITCH_MAGIC, 10);
-			} else {
-				pME.setCancelled(false);
-			}
+				player.getWorld().spawnParticle(Particle.SPELL_WITCH, player.getEyeLocation().add(0, 0.8, 0), 10);
+			}  
 		}
 
 	@EventHandler
@@ -85,9 +76,7 @@ public class CrazyFeetListener implements Listener {
 		if(CrazyFeet.CrazySmokeHead.contains(player)) {
 			
 				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.SMOKE, 10);
-			} else {
-				pME.setCancelled(false);
-			}
+			}  
 		}
 
 	@EventHandler
@@ -98,9 +87,7 @@ public class CrazyFeetListener implements Listener {
 		if(CrazyFeet.CrazyPearlHead.contains(player)) {
 			
 				player.getWorld().playEffect(player.getEyeLocation().add(0, 0.8, 0), Effect.ENDER_SIGNAL, 1, 100);
-			} else {
-				pME.setCancelled(false);
-			}
+			}  
 		}
 
 	@EventHandler
@@ -120,9 +107,7 @@ public class CrazyFeetListener implements Listener {
 			} else {
 				pME.setCancelled(false);
 			}
-		} else {
-			pME.setCancelled(false);
-		}
+		}  
 	}
 
 	@EventHandler
@@ -142,9 +127,7 @@ public class CrazyFeetListener implements Listener {
 			} else {
 				pME.setCancelled(false);
 			}
-		} else {
-			pME.setCancelled(false);
-		}
+		} 
 	}
 
 	@EventHandler
@@ -160,13 +143,11 @@ public class CrazyFeetListener implements Listener {
 			
 			if(to.getX() != from.getBlockX() || to.getY() != from.getY() || to.getZ() != from.getZ()) {
 				loc.setY(loc.getY());
-				player.getWorld().playEffect(loc, Effect.POTION_SWIRL, 1, 100);
+				player.getWorld().spawnParticle( Particle.CRIT_MAGIC, loc, 1, 100);
 			} else {
 				pME.setCancelled(false);
 			}
-		} else {
-			pME.setCancelled(false);
-		}
+		}  
 	}
 
 	@EventHandler
@@ -182,13 +163,11 @@ public class CrazyFeetListener implements Listener {
 			
 			if(to.getX() != from.getBlockX() || to.getY() != from.getY() || to.getZ() != from.getZ()) {
 				loc.setY(loc.getY());
-				player.getWorld().playEffect(loc, Effect.NOTE, 10);
+				player.getWorld().spawnParticle(Particle.NOTE, loc, 10);
 			} else {
 				pME.setCancelled(false);
 			}
-		} else {
-			pME.setCancelled(false);
-		}
+		}  
 	}
 
 	@EventHandler
@@ -204,13 +183,9 @@ public class CrazyFeetListener implements Listener {
 			
 			if(to.getX() != from.getBlockX() || to.getY() != from.getY() || to.getZ() != from.getZ()) {
 				loc.setY(loc.getY());
-				player.getWorld().playEffect(loc, Effect.WITCH_MAGIC, 10);
-			} else {
-				pME.setCancelled(false);
-			}
-		} else {
-			pME.setCancelled(false);
-		}
+				player.getWorld().spawnParticle(Particle.SPELL_MOB, loc, 10);
+			}  
+		}  
 	}
 
 	@EventHandler
@@ -226,13 +201,12 @@ public class CrazyFeetListener implements Listener {
 			
 			if(to.getX() != from.getBlockX() || to.getY() != from.getY() || to.getZ() != from.getZ()) {
 				loc.setY(loc.getY());
-				player.getWorld().playEffect(loc, Effect.HEART, 1);
+				player.getWorld().spawnParticle(Particle.HEART, loc, 1);
 			} else {
 				pME.setCancelled(false);
 			}
-		} else {
-			pME.setCancelled(false);
-		}
+		}  
+			 
 	}
 
 	@EventHandler
@@ -252,8 +226,6 @@ public class CrazyFeetListener implements Listener {
 			} else {
 				pME.setCancelled(false);
 			}
-		} else {
-			pME.setCancelled(false);
-		}
+		}  
 	}
 }
